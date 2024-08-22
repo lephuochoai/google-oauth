@@ -10,7 +10,9 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-8 p-24">
-      <div>{JSON.stringify(credential)}</div>
+      <div className="mx-auto max-w-md break-words">
+        {JSON.stringify(credential)}
+      </div>
       <GoogleLogin
         onSuccess={(credentialResponse) => {
           setCredential(credentialResponse);
